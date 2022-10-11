@@ -29,7 +29,34 @@
 }
 void Task56()
 {
+    // Задача 56: Задайте прямоугольный двумерный массив. Напишите программу, которая будет находить строку с наименьшей суммой элементов.
 
+    Random random = new Random();
+    int rows = random.Next(4, 8);
+    int columns = random.Next(4, 8);
+    int[,] numbers = new int[rows, columns];
+    FillArreyInt(numbers, 0, 99);
+    ShowArreyInt(numbers);
+    Console.WriteLine("");
+
+    
+    int sumMin = 0;
+    int indexRows = 0;
+    for (int i = 0; i < rows; i++)
+    {
+        int sum = 0;
+        for (int j = 0; j < columns; j++)
+        {
+            sum += numbers[i, j];
+        }
+        if(i == 0) sumMin = sum;
+        if(sumMin > sum)
+        {
+            sumMin = sum;
+            indexRows = i;
+        }
+    }
+    Console.WriteLine($"Наименьшая сумма в строке {indexRows + 1} равная {sumMin}");
 }
 void Task58()
 {
@@ -60,6 +87,6 @@ void FillArreyInt(int[,] arr, int min = 0, int max = 0)
 
 
 
-Task54();
-//Task56();
+//Task54();
+Task56();
 //Task58();
