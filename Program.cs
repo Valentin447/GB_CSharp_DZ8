@@ -3,10 +3,10 @@
     // Задача 54: Задайте двумерный массив. Напишите программу, которая упорядочит по убыванию элементы каждой строки двумерного массива.
 
     Random random = new Random();
-    int rows = random.Next(4, 8);
-    int columns = random.Next(4, 8);
+    int rows = random.Next(3, 5);
+    int columns = random.Next(3, 5);
     int[,] numbers = new int[rows, columns];
-    FillArreyInt(numbers, 0, 99);
+    FillArreyInt(numbers, 0, 9);
     ShowArreyInt(numbers);
     Console.WriteLine("");
 
@@ -32,10 +32,10 @@ void Task56()
     // Задача 56: Задайте прямоугольный двумерный массив. Напишите программу, которая будет находить строку с наименьшей суммой элементов.
 
     Random random = new Random();
-    int rows = random.Next(4, 8);
-    int columns = random.Next(4, 8);
+    int rows = random.Next(3, 5);
+    int columns = random.Next(3, 5);
     int[,] numbers = new int[rows, columns];
-    FillArreyInt(numbers, 0, 99);
+    FillArreyInt(numbers, 0, 9);
     ShowArreyInt(numbers);
     Console.WriteLine("");
 
@@ -83,7 +83,7 @@ void Task58()
                     numbers[i, j] = count;
                     count++;
                     ShowArreyInt(numbers);
-                    Thread.Sleep(500); 
+                    Thread.Sleep(500);
                 }
                 else
                 {
